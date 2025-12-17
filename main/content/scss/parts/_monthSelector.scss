@@ -1,0 +1,30 @@
+@mixin css
+{
+    p-datepicker
+    {
+        input.p-element
+        {
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            font-weight: 750;
+            letter-spacing: 1px;
+
+            &:hover,
+            &:focus
+            {
+                background-color: var(--monthSelector-hover-background);
+            }
+
+            &:active
+            {
+                background-color: var(--monthSelector-active-background);
+            }
+
+            &:focus
+            {
+                box-shadow: none;
+            }
+        }
+    }
+}

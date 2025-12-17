@@ -1,0 +1,14 @@
+<div class="flex-row justify-content-center">
+    <button type="button" class="btn btn-default only-content no-padding extra-large-text margin-horizontal-extra-small" [tooltip]="'predchádzajúci mesiac' | firstUppercaseLocalize" (click)="previousMonth()">
+        <span class="fas fa-angle-left"></span>
+    </button>
+
+    <p-datepicker view="month"
+                  dateFormat="MM yy"
+                  [formControl]="selectedMonth"
+                  [readonlyInput]="true"/>
+
+    <button type="button" class="btn btn-default only-content no-padding extra-large-text margin-horizontal-extra-small" [tooltip]="'nasledujúci mesiac' | firstUppercaseLocalize" (click)="nextMonth()">
+        <span class="fas fa-angle-right"></span>
+    </button>
+</div>

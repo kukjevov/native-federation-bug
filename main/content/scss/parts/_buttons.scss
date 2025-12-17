@@ -1,0 +1,17 @@
+@mixin css
+{
+    .btn.no-padding
+    {
+        padding: 0;
+    }
+
+    .btn.start
+    {
+        justify-content: start;
+    }
+
+    .btn.bold
+    {
+        font-weight: 600;
+    }
+}

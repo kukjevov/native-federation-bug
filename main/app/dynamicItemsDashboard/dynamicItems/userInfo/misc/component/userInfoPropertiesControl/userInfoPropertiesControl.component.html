@@ -1,0 +1,10 @@
+<div class="properties-form-group">
+    <label class="properties-control-label">{{'zobrazené vlastnosti' | firstUppercaseLocalize}} <span class="fas fa-info-circle" [tooltip]="'vlastnosti, ktoré majú byť zobrazené' | firstUppercaseLocalize"></span></label>
+    
+    <ng-select class="form-control min-width-none" multiple absolute [formControl]="userInfoPropertiesForm">
+        @for(value of values; track value)
+        {
+            <ng-option [value]="value" [text]="value"/>
+        }
+    </ng-select>
+</div>

@@ -1,0 +1,177 @@
+@use 'sass:color';
+@use 'defaultTheme' as defaults;
+
+@use '@css-styles/common' as mixins;
+
+//############## FONT ##############
+
+$fontSize: defaults.$fontSize;
+
+//############## COLORS ##############
+
+$blue-100: #e1e6ff;
+$blue-400: #c0cde4;
+$blue-700: #2b4e99;
+
+$yellow-100: #fff5e1;
+$yellow-400: #e7cb9c;
+$yellow-700: #f1b348;
+
+//############## LIGHT THEME ##############
+
+$appTheme:
+(
+    fontFamily: 'Roboto Flex',
+    mainMenu:
+    (
+        background: defaults.$gray-7,
+        foreground: defaults.$white,
+    ),
+    monthSelector:
+    (
+        hover:
+        (
+            background: unset,
+        ),
+        active:
+        (
+            background: unset,
+        ),
+    ),
+    userInfo:
+    (
+        background: $blue-100,
+        foreground: defaults.$gray-55,
+    ),
+    calendar:
+    (
+        dayNumber:
+        (
+            background: $blue-700,
+            foreground: defaults.$white,
+        ),
+        hoursNumber:
+        (
+            background: $blue-400,
+            foreground: defaults.$black,
+        ),
+        intervals:
+        (
+            background: $blue-100,
+            foreground: defaults.$black,
+        ),
+        interval:
+        (
+            background: $blue-400,
+            foreground: defaults.$black,
+        ),
+        dayOff:
+        (
+            dayNumber:
+            (
+                background: $yellow-700,
+                foreground: defaults.$white,
+            ),
+            hoursNumber:
+            (
+                background: $yellow-400,
+                foreground: defaults.$black,
+            ),
+            intervals:
+            (
+                background: $yellow-100,
+                foreground: defaults.$black,
+            ),
+        ),
+        withError:
+        (
+            dayNumber:
+            (
+                background: unset,
+                foreground: defaults.$white,
+            ),
+            hoursNumber:
+            (
+                background: unset,
+                foreground: defaults.$white,
+            ),
+            intervals:
+            (
+                background: unset,
+                foreground: defaults.$black,
+            ),
+            interval:
+            (
+                background: unset,
+                foreground: defaults.$white,
+            ),
+        ),
+    ),
+    button:
+    (
+        padding: mixins.getSize($fontSize, 6) mixins.getSize($fontSize, 14),
+        borderRadius: 8px,
+        fontWeight: 340,
+        textTransformation: none,
+        hover:
+        (
+            filter: brightness(94%),
+        ),
+        focus:
+        (
+            filter: brightness(94%),
+        ),
+        active:
+        (
+            filter: brightness(88%),
+        ),
+        primary:
+        (
+            background: unset,
+            foreground: defaults.$white,
+        ),
+        secondary:
+        (
+            background: unset,
+            foreground: defaults.$white,
+        ),
+        info:
+        (
+            background: unset,
+            foreground: defaults.$white,
+        ),
+        default:
+        (
+            background: defaults.$gray-3,
+            foreground: defaults.$white,
+        ),
+        success:
+        (
+            background: unset,
+            foreground: defaults.$white,
+        ),
+        warning:
+        (
+            background: unset,
+            foreground: defaults.$white,
+        ),
+        danger:
+        (
+            background: unset,
+            foreground: defaults.$white,
+        ),
+        error:
+        (
+            background: unset,
+            foreground: defaults.$white,
+        ),
+        icon:
+        (
+            foreground: defaults.$gray-5,
+            hover:
+            (
+                foreground: unset,
+            ),
+        ),
+    ),
+);

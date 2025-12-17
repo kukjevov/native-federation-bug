@@ -1,0 +1,7 @@
+{
+    "$schema": "./permissions.schema.json",
+    "home-page":        ["DEVELOPER", "USER"],
+    "logging-settings": ["DEVELOPER"],
+    "debug-settings":   ["DEVELOPER"],
+    "debugInfo":        ["DEVELOPER"]
+}

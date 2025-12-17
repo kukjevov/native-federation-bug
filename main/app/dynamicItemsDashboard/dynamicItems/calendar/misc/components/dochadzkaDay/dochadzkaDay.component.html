@@ -1,0 +1,52 @@
+@if(data().isCurrentMonth)
+{
+    <div class="flex-row spread-text semi-bold" [class.day-off]="data().isWeekend">
+        <div class="day-number">
+            <div>{{data().day | numeral: '00'}}</div>
+        </div>
+
+        <div class="flex-1 hours-number text-center flex-row">
+            <span class="flex-1">10:00</span>
+
+            <button class="btn btn-default only-content no-padding margin-horizontal-extra-small bold" [tooltip]="'pridať nový interval' | firstUppercaseLocalize" (click)="showEditDialog()">
+                <span class="fas fa-plus"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="flex-1 intervals flex-column" [class.day-off]="data().isWeekend">
+        <div class="interval mat-elevation-z6 flex-row">
+            <span class="flex-1">06:30 - 12:30 PRAC</span>
+
+            <button class="btn btn-default only-content no-padding bold padding-horizontal-extra-small" [tooltip]="'upraviť interval' | firstUppercaseLocalize" (click)="showEditDialog()">
+                <span class="fas fa-pencil"></span>
+            </button>
+
+            <button class="btn btn-default only-content no-padding bold padding-horizontal-extra-small"
+                    [tooltip]="'zmazať interval' | firstUppercaseLocalize"
+                    [confirmation]="'skutočne si prajete interval odstrániť?' | firstUppercaseLocalize"
+                    [confirmationTitle]="('potvrdenie odstránenia intervalu' | firstUppercaseLocalize) ?? ''">
+                <span class="fas fa-trash"></span>
+            </button>
+        </div>
+
+        <div class="interval mat-elevation-z6 flex-row">
+            <span class="flex-1">13:00 - 15:00 PRAC</span>
+
+            <button class="btn btn-default only-content no-padding bold padding-horizontal-extra-small" [tooltip]="'upraviť interval' | firstUppercaseLocalize" (click)="showEditDialog()">
+                <span class="fas fa-pencil"></span>
+            </button>
+
+            <button class="btn btn-default only-content no-padding bold padding-horizontal-extra-small"
+                    [tooltip]="'zmazať interval' | firstUppercaseLocalize"
+                    [confirmation]="'skutočne si prajete interval odstrániť?' | firstUppercaseLocalize"
+                    [confirmationTitle]="('potvrdenie odstránenia intervalu' | firstUppercaseLocalize) ?? ''">
+                <span class="fas fa-trash"></span>
+            </button>
+        </div>
+    </div>
+}
+@else
+{
+    <div class="out-of-month flex-1"></div>
+}

@@ -1,0 +1,52 @@
+{
+    // Use IntelliSense to learn about possible Node.js debug attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": 
+    [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Webpack Build",
+            "program": "${workspaceRoot}/node_modules/@angular/cli/bin/ng.js",
+            "args": [
+                "serve",
+            ],
+            "cwd": "${workspaceFolder}/main",
+            "outFiles": []
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Lerna start Build",
+            "program": "${workspaceRoot}/node_modules/lerna/dist/cli.js",
+            "args": [
+                "run",
+                "start",
+                "--parallel",
+            ],
+            "cwd": "${workspaceFolder}/main",
+            "outFiles": []
+        },
+        {
+            "name": "Launch Chrome",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:8888",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}/wwwroot",
+            "sourceMapPathOverrides": 
+            {
+                "webpack:///./*": "${workspaceRoot}/*"
+            }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Server",
+            "program": "${workspaceRoot}/server.cjs",
+            "outFiles": []
+        }
+    ]
+}

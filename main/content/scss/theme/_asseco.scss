@@ -1,0 +1,232 @@
+@use 'sass:color';
+@use 'defaultTheme' as defaults;
+
+@use '@css-styles/common' as mixins;
+
+//############## FONT ##############
+
+$fontSize: defaults.$fontSize;
+
+//############## COLORS ##############
+
+$blue-50: #dff4fe;
+$blue-100: #ade2fb;
+$blue-200: #74cff8;
+$blue-300: #2ebdf5; //MAIN
+$blue-400: #00aff4;
+$blue-500: #00a0f1;
+$blue-600: #0093e3;
+$blue-700: #0080cf;
+$blue-800: #006fbb;
+$blue-900: #004f99;
+
+$orange-50: #f9eae8;
+$orange-100: #fbcfbf;
+$orange-200: #f9b096;
+$orange-300: #f7926c;
+$orange-400: #f67b4c;
+$orange-500: #f5662e; //MAIN
+$orange-600: #ea602a;
+$orange-700: #dc5926;
+$orange-800: #ce5323;
+$orange-900: #b4471d;
+
+$red-50: #ffe8ef;
+$red-100: #ffc5d3;
+$red-200: #f98a99;
+$red-300: #f25770;
+$red-400: #ff004c; //MAIN
+$red-500: #ff0030;
+$red-600: #f70030;
+$red-700: #e5002a;
+$red-800: #d80022;
+$red-900: #c90015;
+
+$lightYellow: #FFF323;
+$yellow: #FFC800;
+$darkYellow: #FF9800;
+
+$lightViolet: #9997F7;
+$violet: #5C53BD;
+$darkViolet: #333399;
+
+$lightGreen: #33CC66;
+$green: #00A13C;
+$darkGreen: #007B28;
+
+$lightTeal: #92E4D7;
+$teal: #5FC2AF;
+$darkTeal: #408F7C;
+
+$primary: $blue-300;
+$primaryAlt: $blue-800;
+
+//############## LIGHT THEME ##############
+
+$appTheme:
+(
+    fontFamily: 'Roboto Flex',
+    mainMenu:
+    (
+        background: $blue-300,
+        foreground: defaults.$semiBlack,
+    ),
+    monthSelector:
+    (
+        hover:
+        (
+            background: $blue-50,
+        ),
+        active:
+        (
+            background: $blue-100,
+        ),
+    ),
+    userInfo:
+    (
+        background: $blue-50,
+        foreground: defaults.$semiBlack,
+    ),
+    calendar:
+    (
+        dayNumber:
+        (
+            background: $blue-500,
+            foreground: defaults.$white,
+        ),
+        hoursNumber:
+        (
+            background: $blue-200,
+            foreground: defaults.$black,
+        ),
+        intervals:
+        (
+            background: $blue-50,
+            foreground: defaults.$black,
+        ),
+        interval:
+        (
+            background: $blue-600,
+            foreground: defaults.$white,
+        ),
+        dayOff:
+        (
+            dayNumber:
+            (
+                background: $orange-600,
+                foreground: defaults.$white,
+            ),
+            hoursNumber:
+            (
+                background: $orange-300,
+                foreground: defaults.$black,
+            ),
+            intervals:
+            (
+                background: $orange-100,
+                foreground: defaults.$black,
+            ),
+        ),
+        withError:
+        (
+            dayNumber:
+            (
+                background: $red-900,
+                foreground: defaults.$white,
+            ),
+            hoursNumber:
+            (
+                background: $red-600,
+                foreground: defaults.$white,
+            ),
+            intervals:
+            (
+                background: $red-100,
+                foreground: defaults.$black,
+            ),
+            interval:
+            (
+                background: $red-600,
+                foreground: defaults.$white,
+            ),
+        ),
+    ),
+    dialog:
+    (
+        // border: $_gray-7,
+        title:
+        (
+            background: $blue-700,
+            foreground: defaults.$white,
+        ),
+        content:
+        (
+            background: defaults.$white,
+            foreground: defaults.$black,
+        ),
+        closeButton:
+        (
+            hover:
+            (
+                foreground: defaults.$gray-15,
+                background: $blue-700,
+            ),
+        ),
+    ),
+    button:
+    (
+        padding: mixins.getSize($fontSize, 6) mixins.getSize($fontSize, 14),
+        fontWeight: 340,
+        textTransformation: none,
+        primary:
+        (
+            background: $blue-300,
+            foreground: defaults.$white,
+            hover:
+            (
+                background: $blue-400,
+                foreground: defaults.$white,
+            ),
+            active:
+            (
+                background: $blue-500,
+                foreground: defaults.$white,
+            ),
+        ),
+        info:
+        (
+            background: $teal,
+            foreground: defaults.$white,
+        ),
+        default:
+        (
+            background: defaults.$gray-5,
+            foreground: defaults.$white,
+            onlyContent:
+            (
+                hover:
+                (
+                    foreground: $blue-300,
+                ),
+                active:
+                (
+                    foreground: $blue-300,
+                ),
+            ),
+        ),
+        success:
+        (
+            background: $green,
+            foreground: defaults.$white,
+        ),
+        warning:
+        (
+            background: $darkYellow,
+            foreground: defaults.$white,
+        ),
+        danger:
+        (
+            foreground: defaults.$white,
+        ),
+    ),
+);

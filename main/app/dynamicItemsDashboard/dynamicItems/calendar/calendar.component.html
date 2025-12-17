@@ -1,0 +1,5 @@
+<month-calendar [showWeekNumber]="true" weekDayName="Full" [display]="monthSelection.selectedMonth()">
+    <div *dochadzkaCalendarDayTemplate="let data" class="flex-column">
+        <dochadzka-day class="flex-1" [data]="data" />
+    </div>
+</month-calendar>

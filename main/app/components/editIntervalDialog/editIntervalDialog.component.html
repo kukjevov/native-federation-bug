@@ -1,0 +1,21 @@
+<div class="flex-row margin-bottom-small">
+    <button type="button" class="flex-1 toggle-button" [class.mat-elevation-z8]="!hourly()" [class.mat-elevation-z3]="hourly()" [class.active]="hourly()" (click)="hourly.set(true)">
+        <span>{{'hodinový' | firstUppercaseLocalize}}</span>
+    </button>
+
+    <button type="button" class="flex-1 toggle-button" [class.mat-elevation-z8]="hourly()" [class.mat-elevation-z3]="!hourly()" [class.active]="!hourly()" (click)="hourly.set(false)">
+        <span>{{'denný' | firstUppercaseLocalize}}</span>
+    </button>
+</div>
+
+<div class="flex-row flex-end buttons-gap">
+    <button type="button" class="btn btn-danger">
+        <span class="fas fa-ban"></span>
+        <span>{{'zrušiť' | firstUppercaseLocalize}}</span>
+    </button>
+
+    <button type="button" class="btn btn-success">
+        <span class="fas fa-save"></span>
+        <span>{{'uložiť' | firstUppercaseLocalize}}</span>
+    </button>
+</div>

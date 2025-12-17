@@ -1,0 +1,51 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions":
+    {
+        "paths": 
+        {
+            "modernizr": ["./content/external/scripts/modernizr-custom.js"]
+        },
+        "types":
+        [
+            "node",
+            "konami.js",
+        ],
+        "plugins":
+        [
+            {
+                "name": "@angular/language-service"
+            }
+        ]
+    },
+    "files":
+    [
+        "config/global.d.ts"
+    ],
+    "include":
+    [
+        "app/**/*.ts"
+    ],
+    "exclude":
+    [
+        "../node_modules"
+    ],
+    "angularCompilerOptions":
+    {
+        "strictInjectionParameters": true,
+        "strictInputAccessModifiers": true,
+        "strictTemplates": true,
+        "strictStandalone": true,
+        "typeCheckHostBindings": false,
+        "extendedDiagnostics":
+        {
+            "checks":
+            {
+                "interpolatedSignalNotInvoked": "error",
+                "unusedStandaloneImports": "error",
+                "uninvokedFunctionInEventBinding": "error",
+                "missingControlFlowDirective": "error"
+            }
+        }
+    }
+}

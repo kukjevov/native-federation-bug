@@ -1,0 +1,12 @@
+<div class="flex-column align-items-center gap-small flex-1">
+    <div class="flex-1 justify-content-center flex-column">
+        <div class="alert alert-warning medium-large-text">{{'len účty z domény sú povolené' | firstUppercaseLocalize: authDomain}}</div>
+    </div>
+    
+    <button class="btn btn-primary" (click)="logInAsDifferentUser()">
+        <span class="icon fas fa-right-to-bracket"></span>
+        <span class="text">{{'príhlásiť sa iným účtom' | firstUppercaseLocalize}}</span>
+    </button>
+    
+    <div class="flex-1"></div>
+</div>

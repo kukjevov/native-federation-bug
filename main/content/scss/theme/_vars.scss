@@ -1,0 +1,61 @@
+//---------------------- SIZING ----------------------
+$sizeXs: 4;
+$sizeSm: 8;
+$sizeSmMd: 12;
+$sizeMd: 16;
+$sizeMdLg: 20;
+$sizeLg: 24;
+$sizeXl: 32;
+$sizeXxl: 40;
+$size3xl: 48;
+$size7xl: 80;
+
+$fontXs: 12;
+$fontSm: 14;
+$fontMd: 16;
+$fontMdLg: 18;
+$fontMdLgr: 20;
+$fontLg: 32;
+$fontXl: 40;
+
+$fontSizes:
+(
+    extra-small: $fontXs,
+    small: $fontSm,
+    medium: $fontMd,
+    medium-large: $fontMdLg,
+    medium-larger: $fontMdLgr,
+    large: $fontLg,
+    extra-large: $fontXl,
+);
+
+$sizes: 
+(
+    none: 0,
+    extra-small: $sizeXs,
+    small: $sizeSm,
+    small-medium: $sizeSmMd,
+    medium: $sizeMd,
+    medium-large: $sizeMdLg,
+    large: $sizeLg,
+    extra-large: $sizeXl,
+    extra-extra-large: $sizeXxl,
+    extra3-large: $size3xl,
+    extra7-large: $size7xl,
+
+    xs: $sizeXs,
+    sm: $sizeSm,
+    sm-md: $sizeSmMd,
+    md: $sizeMd,
+    mdLg: $sizeMdLg,
+    lg: $sizeLg,
+    xl: $sizeXl,
+    xxl: $sizeXxl,
+    x3l: $size3xl,
+    x7l: $size7xl,
+);
+
+$notificationTypes: ('success', 'error', 'info', 'warning');
+$buttonTypes: ('primary', 'danger', 'success', 'warning', 'default');
+$textTypes: ('default', 'light', 'ultralight', 'primary');
+$buttonStates: (onlyContent: only-content, noBackground: no-background, lightBackground: light-background, selected: selected,);

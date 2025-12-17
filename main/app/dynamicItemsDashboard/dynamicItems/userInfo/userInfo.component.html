@@ -1,0 +1,171 @@
+<div class="user-info-panel mat-elevation-z3 flex-column row-gap-extra-small">
+    @if(optionsSafe.personalNumber)
+    {
+        <div class="flex-row extra-small-text">
+            <span class="bold">{{'osobné číslo' | firstUppercaseLocalize}}:</span>
+            <span class="margin-left-extra-small">0000</span>
+        </div>
+    }
+
+    @if(optionsSafe.name)
+    {
+        <div class="flex-row extra-small-text">
+            <span class="bold">{{'meno' | firstUppercaseLocalize}}:</span>
+            <span class="margin-left-extra-small">Testo Steron</span>
+        </div>
+    }
+
+    @if(optionsSafe.workingShiftType)
+    {
+        <div class="flex-row extra-small-text">
+            <span class="bold">{{'pracovná doba' | firstUppercaseLocalize}}:</span>
+            <span class="margin-left-extra-small">A100</span>
+        </div>
+    }
+
+    @if(optionsSafe.workingHours)
+    {
+        <div class="flex-row extra-small-text">
+            <span class="bold">{{'dĺžka prac. doby' | firstUppercaseLocalize}}:</span>
+            <span class="margin-left-extra-small">8,00</span>
+        </div>
+    }
+
+    @if((optionsSafe.personalNumber ||
+         optionsSafe.name ||
+         optionsSafe.workingShiftType ||
+         optionsSafe.workingHours) &&
+        (optionsSafe.status ||
+         optionsSafe.finishedHours ||
+         optionsSafe.loggedHours ||
+         optionsSafe.nominalFond ||
+         optionsSafe.aberration ||
+         optionsSafe.mealTickets))
+    {
+        <div class="margin-vertical-extra-small"></div>
+    }
+
+    @if(optionsSafe.status)
+    {
+        <div class="flex-row extra-small-text">
+            <span class="bold">{{'stav' | firstUppercaseLocalize}}:</span>
+            <span class="margin-left-extra-small">Rozpracované</span>
+        </div>
+    }
+
+    @if(optionsSafe.finishedHours)
+    {
+        <div class="flex-row extra-small-text">
+            <span class="bold">{{'odprac. hodiny' | firstUppercaseLocalize}}:</span>
+            <span class="margin-left-extra-small">80:00</span>
+        </div>
+    }
+
+    @if(optionsSafe.loggedHours)
+    {
+        <div class="flex-row extra-small-text">
+            <span class="bold">{{'evid. hodiny' | firstUppercaseLocalize}}:</span>
+            <span class="margin-left-extra-small">80:00</span>
+        </div>
+    }
+
+    @if(optionsSafe.nominalFond)
+    {
+        <div class="flex-row extra-small-text">
+            <span class="bold">{{'nominálny fond' | firstUppercaseLocalize}}:</span>
+            <span class="margin-left-extra-small">80:00</span>
+        </div>
+    }
+        
+    @if(optionsSafe.aberration)
+    {
+        <div class="flex-row extra-small-text">
+            <span class="bold">{{'odchýlka' | firstUppercaseLocalize}}:</span>
+            <span class="margin-left-extra-small">0:00</span>
+        </div>
+    }
+
+    @if(optionsSafe.mealTickets)
+    {
+        <div class="flex-row extra-small-text">
+            <span class="bold">{{'stravné lístky' | firstUppercaseLocalize}}:</span>
+            <span class="margin-left-extra-small">15</span>
+        </div>
+    }
+
+    @if((optionsSafe.status ||
+         optionsSafe.finishedHours ||
+         optionsSafe.loggedHours ||
+         optionsSafe.nominalFond ||
+         optionsSafe.aberration ||
+         optionsSafe.mealTickets) &&
+        optionsSafe.vaccationRemaining)
+    {
+        <div class="margin-vertical-extra-small"></div>
+    }
+
+    @if(optionsSafe.vaccationRemaining)
+    {
+        <div class="flex-row extra-small-text">
+            <span class="bold">{{'dovolenka zost.' | firstUppercaseLocalize}}:</span>
+            <span class="margin-left-extra-small">10</span>
+        </div>
+    }
+
+    @if(optionsSafe.vaccationRemaining &&
+        (optionsSafe.vaccationHalfDaySpent ||
+         optionsSafe.sickDaysSpent ||
+         optionsSafe.EHOSpent))
+    {
+        <div class="margin-vertical-extra-small"></div>
+    }
+
+    @if(optionsSafe.vaccationHalfDaySpent)
+    {
+        <div class="flex-row extra-small-text">
+            <span class="bold">{{'dovolenka 1/2 dňa minutá' | firstUppercaseLocalize}}:</span>
+            <span class="margin-left-extra-small">1</span>
+        </div>
+    }
+
+    @if(optionsSafe.sickDaysSpent)
+    {
+        <div class="flex-row extra-small-text">
+            <span class="bold">{{'sick days minuté' | firstUppercaseLocalize}}:</span>
+            <span class="margin-left-extra-small">1</span>
+        </div>
+    }
+
+    @if(optionsSafe.EHOSpent)
+    {
+        <div class="flex-row extra-small-text">
+            <span class="bold">{{'E-HO minuté' | firstUppercaseLocalize}}:</span>
+            <span class="margin-left-extra-small">3</span>
+        </div>
+    }
+
+    @if((optionsSafe.vaccationHalfDaySpent ||
+         optionsSafe.sickDaysSpent ||
+         optionsSafe.EHOSpent) &&
+        (optionsSafe.divisionShortcut ||
+         optionsSafe.department))
+    {
+        <div class="margin-vertical-extra-small"></div>
+    }
+
+    @if(optionsSafe.divisionShortcut)
+    {
+        <div class="flex-row extra-small-text">
+            <span class="bold">{{'divízia(skratka)' | firstUppercaseLocalize}}:</span>
+            <span class="margin-left-extra-small">PUBHLT</span>
+        </div>
+    }
+
+    @if(optionsSafe.department)
+    {
+        <div class="flex-row extra-small-text">
+            <span class="bold">{{'útvar' | firstUppercaseLocalize}}:</span>
+            <span class="margin-left-extra-small">MIS/CPT</span>
+        </div>
+    }
+</div>

@@ -1,0 +1,14 @@
+@mixin in-layer($layerName)
+{
+    @at-root
+    {
+        @layer #{$layerName}
+        {
+            &
+            {
+                @content;
+            }
+        }
+    }
+}
+// TODO: move into common

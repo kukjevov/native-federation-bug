@@ -1,0 +1,19 @@
+<div class="page-content flex-row padding-vertical-extra-small buttons-gap align-items-center justify-content-center large-text">
+    <back-button />
+
+    <button type="button" class="btn btn-primary only-content no-padding" [tooltip]="'uložiť' | firstUppercaseLocalize" (click)="save()">
+        <span class="fas fa-save"></span>
+    </button>
+
+    <button type="button" class="btn btn-primary only-content no-padding" [tooltip]="'undo' | firstUppercaseLocalize" (click)="history.undo()">
+        <span class="fas fa-rotate-left"></span>
+    </button>
+
+    <button type="button" class="btn btn-primary only-content no-padding" [tooltip]="'redo' | firstUppercaseLocalize" (click)="history.redo()">
+        <span class="fas fa-rotate-right"></span>
+    </button>
+
+    <debug-data [copyClick]="layoutData()">metadata</debug-data>
+</div>
+
+<layout-editor class="fullscreen-content" [metadata]="layoutData().layout" [whiteList]="[{package: 'basic-components', name: 'stackPanel'}]" [packages]="['basic-components', 'dashboard-components']"/>

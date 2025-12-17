@@ -1,0 +1,224 @@
+{
+    "name": "dashboard",
+    "layout":
+    {
+        "id": "gridPanel-oxujcvgmswcmpzgq",
+        "displayName": "root",
+        "package": "basic-components",
+        "name": "gridPanel",
+        "options":
+        {
+            "rows": 
+            [
+                {
+                    "height": "auto"
+                },
+                {
+                    "height": "1fr"
+                },
+                {
+                    "height": "auto"
+                }
+            ],
+            "columns": 
+            [
+                {
+                    "width": "auto"
+                },
+                {
+                    "width": "1fr"
+                }
+            ],
+            "areas": 
+            [
+                {
+                    "id": "gridPanelArea-fklopyodsh",
+                    "name": "gridPanelArea",
+                    "package": "basic-components",
+                    "displayName": "sidebar",
+                    "scope": null,
+                    "options": 
+                    {
+                        "gridColumnEnd": 2,
+                        "gridColumnStart": 1,
+                        "gridRowEnd": 4,
+                        "gridRowStart": 1,
+                        "component": 
+                        {
+                            "id": "stackPanel-lgxhcenmpwadoxou",
+                            "displayName": "stackPanel-lgxhcenmpwadoxou",
+                            "package": "basic-components",
+                            "name": "stackPanel",
+                            "options":
+                            {
+                                "children":
+                                [
+                                    {
+                                        "id": "dochadzkaSubmenu-llpyspuaqwkjvlor",
+                                        "displayName": "dochadzkaSubmenu-llpyspuaqwkjvlor",
+                                        "package": "dashboard-components",
+                                        "name": "dochadzkaSubmenu",
+                                        "options": {},
+                                        "scope": null
+                                    },
+                                    {
+                                        "id": "userInfo-jdfubjczxxfwdcqa",
+                                        "displayName": "userInfo-jdfubjczxxfwdcqa",
+                                        "package": "dashboard-components",
+                                        "name": "userInfo",
+                                        "options":
+                                        {
+                                            "personalNumber": true,
+                                            "name": true,
+                                            "workingShiftType": true,
+                                            "workingHours": true,
+                                            "status": true,
+                                            "finishedHours": true,
+                                            "loggedHours": true,
+                                            "nominalFond": true,
+                                            "aberration": true,
+                                            "mealTickets": true,
+                                            "vaccationRemaining": true,
+                                            "vaccationHalfDaySpent": true,
+                                            "sickDaysSpent": true,
+                                            "EHOSpent": true,
+                                            "divisionShortcut": true,
+                                            "department": true
+                                        },
+                                        "scope": null
+                                    }
+                                ]
+                            },
+                            "scope": null
+                        }
+                    }
+                },
+                {
+                    "id": "gridPanelArea-zncuvqosee",
+                    "name": "gridPanelArea",
+                    "package": "basic-components",
+                    "displayName": "monthSelector",
+                    "scope": null,
+                    "options": {
+                        "gridColumnEnd": 3,
+                        "gridColumnStart": 2,
+                        "gridRowEnd": 2,
+                        "gridRowStart": 1,
+                        "component": 
+                        {
+                            "id": "stackPanel-pjczkhdpdpgssrke",
+                            "displayName": "stackPanel-pjczkhdpdpgssrke",
+                            "package": "basic-components",
+                            "name": "stackPanel",
+                            "options":
+                            {
+                                "children":
+                                [
+                                    {
+                                        "id": "monthSelector-skpjpfjysozimorc",
+                                        "displayName": "monthSelector-skpjpfjysozimorc",
+                                        "package": "dashboard-components",
+                                        "name": "monthSelector",
+                                        "options": {},
+                                        "scope": null
+                                    },
+                                    {
+                                        "id": "userSelector-nejwzkylxlbtsjtw",
+                                        "displayName": "userSelector-nejwzkylxlbtsjtw",
+                                        "package": "dashboard-components",
+                                        "name": "userSelector",
+                                        "options": {},
+                                        "scope": null
+                                    }
+                                ],
+                                "horizontal": true,
+                                "wrap": false,
+                                "flex": "",
+                                "cssClass": "justify-content-center",
+                                "margin":
+                                {
+                                    "top": null,
+                                    "right": null,
+                                    "bottom": null,
+                                    "left": null
+                                },
+                                "padding":
+                                {
+                                    "top": null,
+                                    "right": null,
+                                    "bottom": null,
+                                    "left": null
+                                },
+                                "textStyling": null
+                            },
+                            "scope": null
+                        }
+                    }
+                },
+                {
+                    "id": "gridPanelArea-jafewlj3",
+                    "name": "gridPanelArea",
+                    "package": "basic-components",
+                    "displayName": "calendar",
+                    "scope": null,
+                    "options": {
+                        "gridColumnEnd": 3,
+                        "gridColumnStart": 2,
+                        "gridRowEnd": 3,
+                        "gridRowStart": 2,
+                        "component": 
+                        {
+                            "id": "calendar-vpqcjklcflvhddlr",
+                            "displayName": "calendar-vpqcjklcflvhddlr",
+                            "package": "dashboard-components",
+                            "name": "calendar",
+                            "options":
+                            {
+                                "cssClass": null,
+                                "margin":
+                                {
+                                    "top": null,
+                                    "right": null,
+                                    "bottom": null,
+                                    "left": null
+                                },
+                                "padding":
+                                {
+                                    "top": "15px",
+                                    "right": "20px",
+                                    "bottom": "15px",
+                                    "left": "20px"
+                                },
+                                "textStyling": null
+                            },
+                            "scope": null
+                        }
+                    }
+                },
+                {
+                    "id": "gridPanelArea-hehsea21",
+                    "name": "gridPanelArea",
+                    "package": "basic-components",
+                    "displayName": "monthOverview",
+                    "scope": null,
+                    "options": {
+                        "gridColumnEnd": 3,
+                        "gridColumnStart": 2,
+                        "gridRowEnd": 4,
+                        "gridRowStart": 3,
+                        "component": 
+                        {
+                            "id": "monthOverview-fjosdqnagitjofye",
+                            "displayName": "monthOverview-fjosdqnagitjofye",
+                            "package": "dashboard-components",
+                            "name": "monthOverview",
+                            "options": {},
+                            "scope": null
+                        }
+                    }
+                }
+            ]   
+        },
+        "scope": null
+    }
+}

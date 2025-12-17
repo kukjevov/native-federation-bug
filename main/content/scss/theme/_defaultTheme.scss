@@ -1,0 +1,149 @@
+@use 'sass:color';
+@use 'sass:map';
+
+@use '@css-styles/common' as mixins;
+
+//############## FONT ##############
+
+$fontSize: 14px;
+
+//############## AVAILABLE COLORS ##############
+
+$gray-0: #e5e5e5;
+$gray-1: #e0e0e0;
+$gray-15: #D2D7D7;
+$gray-2: #cccccc;
+$gray-28: #AAAFAF;
+$gray-3: #aaaaaa;
+$gray-4: #9d9d9d;
+$gray-48: #7D8282;
+$gray-5: #737373;
+$gray-55: #696969;
+$gray-6: #555555;
+$gray-7: #444444;
+$gray-8: #383838;
+$gray-9: #1e1e1e;
+
+$white: #fff;
+$black: #000;
+$semiBlack: #333;
+
+//############## DEFAULT THEME ##############
+
+$defaultTheme:
+(
+    page:
+    (
+        side:
+        (
+            width: 2%,
+        ),
+        content:
+        (
+            width: 1650px,
+        ),
+    ),
+    mainMenu:
+    (
+        linkActive:
+        (
+            foreground: $semiBlack,
+        ),
+        linkHover:
+        (
+            foreground: $gray-7,
+        ),
+    ),
+    userInfo:
+    (
+        background: unset,
+        foreground: unset,
+    ),
+    monthSelector:
+    (
+        hover:
+        (
+            background: unset,
+        ),
+        active:
+        (
+            background: unset,
+        ),
+    ),
+    calendar:
+    (
+        outOfMonth:
+        (
+            background: $gray-1,
+        ),
+        dayNumber:
+        (
+            background: unset,
+            foreground: unset,
+        ),
+        hoursNumber:
+        (
+            background: unset,
+            foreground: unset,
+        ),
+        intervals:
+        (
+            background: unset,
+            foreground: unset,
+        ),
+        interval:
+        (
+            background: unset,
+            foreground: unset,
+        ),
+        dayOff:
+        (
+            dayNumber:
+            (
+                background: unset,
+                foreground: unset,
+            ),
+            hoursNumber:
+            (
+                background: unset,
+                foreground: unset,
+            ),
+            intervals:
+            (
+                background: unset,
+                foreground: unset,
+            ),
+        ),
+        withError:
+        (
+            dayNumber:
+            (
+                background: unset,
+                foreground: unset,
+            ),
+            hoursNumber:
+            (
+                background: unset,
+                foreground: unset,
+            ),
+            intervals:
+            (
+                background: unset,
+                foreground: unset,
+            ),
+            interval:
+            (
+                background: unset,
+                foreground: unset,
+            ),
+        ),
+    ),
+);
+
+@function defineTheme($theme: (), $customization: ())
+{
+    $theme: map.deep-merge($defaultTheme, $theme);
+    $theme: map.deep-merge($theme, $customization);
+
+    @return $theme;
+}

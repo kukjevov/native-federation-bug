@@ -1,0 +1,12 @@
+@use 'sass:map';
+
+@use '@css-styles/common' as mixins;
+
+@mixin buildThemeColors($theme)
+{
+    @include mixins.buildCssVars('-', $theme);
+
+    --mdc-dialog-container-shape: 0;
+    --mdc-dialog-container-color: transparent;
+    --mat-dialog-container-shape: 0;
+}

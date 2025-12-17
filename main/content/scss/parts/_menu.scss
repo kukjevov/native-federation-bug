@@ -1,0 +1,32 @@
+@mixin css
+{
+    main-menu
+    {
+        background-color: var(--mainMenu-background);
+
+        .menu-btn.only-content
+        {
+            font-weight: 550;
+            font-stretch: 115%;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--mainMenu-foreground);
+            
+            &:focus
+            {
+                color: var(--mainMenu-foreground);
+            }
+
+            &:active
+            {
+                color: var(--mainMenu-linkActive-foreground);
+            }
+
+            &:hover
+            {
+                color: var(--mainMenu-linkHover-foreground);
+            }
+        }
+    }
+}

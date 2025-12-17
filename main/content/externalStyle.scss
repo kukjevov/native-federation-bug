@@ -1,0 +1,6 @@
+@use "sass:meta";
+
+@include meta.load-css("@angular/material/prebuilt-themes/azure-blue.css");
+@include meta.load-css("@fortawesome/fontawesome-free/css/all.min.css");
+// @include meta.load-css("primeng/resources/themes/saga-blue/theme.css");
+// @include meta.load-css("primeng/resources/primeng.css");

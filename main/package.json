@@ -1,0 +1,20 @@
+{
+    "name": "dochadzka-fe-main",
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "build": "ng build",
+        "build:min": "ng build -c production",
+        "prebuild": "npm run version:build && npm run config:build",
+        "prebuild:min": "npm run clean && npm run prebuild",
+        "clean": "rimraf wwwroot config/configOverride.js config/configServerOverride.js config/configBrowserOverride.js version.json",
+        "clean:deps": "rimraf .angular || echo '.angular removed'",
+        "version:build": "ngv -e \"node .utils/write.version.js\"",
+        "config:build": "node .utils/generateConfig.js",
+        "server": "node server.js",
+        "lint": "eslint app/**/*.ts",
+        "prestart": "npm run version:build && npm run config:build",
+        "start": "concurrently \"npm run server -- --devPort\" \"ng serve\""
+    },
+    "private": true
+}

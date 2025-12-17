@@ -1,0 +1,135 @@
+:host
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.hours-number,
+.interval
+{
+    .btn.only-content
+    {
+        opacity: .2;
+        transition: all 280ms;
+    }
+}
+
+:host(:hover)
+{
+    .hours-number .btn.only-content
+    {
+        opacity: 1;
+    }
+}
+
+.interval:hover
+{
+    .btn.only-content
+    {
+        opacity: 1;
+    }
+}
+
+.interval
+{
+    .btn.only-content
+    {
+        color: var(--calendar-interval-foreground);
+
+        &:hover
+        {
+            opacity: .7;
+        }
+    }
+}
+
+.out-of-month
+{
+    background-color: var(--calendar-outOfMonth-background);
+}
+
+.day-number
+{
+    color: var(--calendar-dayNumber-foreground);
+    background-color: var(--calendar-dayNumber-background);
+    padding-inline: var(--size-sm);
+    padding-block: var(--size-xs);
+
+    &>div
+    {
+        min-inline-size: 2.2ch;
+    }
+}
+
+.hours-number
+{
+    color: var(--calendar-hoursNumber-foreground);
+    background-color: var(--calendar-hoursNumber-background);
+    padding-block: var(--size-xs);
+}
+
+.intervals
+{
+    color: var(--calendar-intervals-foreground);
+    background-color: var(--calendar-intervals-background);
+    padding-inline: var(--size-sm);
+    padding-block: var(--size-xs);
+    gap: var(--size-xs);
+}
+
+.interval
+{
+    border-radius: var(--border-radius);
+    padding-inline: var(--size-xs);
+    padding-block: var(--size-xs);
+    color: var(--calendar-interval-foreground);
+    background-color: var(--calendar-interval-background);
+}
+
+.day-off
+{
+    .day-number
+    {
+        color: var(--calendar-dayOff-dayNumber-foreground);
+        background-color: var(--calendar-dayOff-dayNumber-background);
+    }
+
+    .hours-number
+    {
+        color: var(--calendar-dayOff-hoursNumber-foreground);
+        background-color: var(--calendar-dayOff-hoursNumber-background);
+    }
+
+    &.intervals
+    {
+        color: var(--calendar-dayOff-intervals-foreground);
+        background-color: var(--calendar-dayOff-intervals-background);
+    }
+}
+
+.with-error
+{
+    .day-number
+    {
+        color: var(--calendar-withError-dayNumber-foreground);
+        background-color: var(--calendar-withError-dayNumber-background);
+    }
+
+    .hours-number
+    {
+        color: var(--calendar-withError-hoursNumber-foreground);
+        background-color: var(--calendar-withError-hoursNumber-background);
+    }
+
+    &.intervals
+    {
+        color: var(--calendar-withError-intervals-foreground);
+        background-color: var(--calendar-withError-intervals-background);
+    }
+
+    &.interval
+    {
+        color: var(--calendar-withError-interval-foreground);
+        background-color: var(--calendar-withError-interval-background);
+    }
+}

@@ -1,0 +1,15 @@
+<div class="dashboard-content flex-1">
+    <div class="full-grid">
+        <ng-scrollbar>
+            <ng-container *layoutComponentRenderer="layoutData().layout"/>
+        </ng-scrollbar>
+    </div>
+
+    <div class="customize-btns padding-extra-small medium-large-text flex-row column-gap-small">
+        <debug-data [copyClick]="{}">metadata</debug-data>
+        
+        <a class="btn btn-default only-content no-padding">
+            <span class="fas fa-pencil" routerLink="/customize" [tooltip]="'prispôsobiť' | firstUppercaseLocalize"></span>
+        </a>
+    </div>
+</div>
