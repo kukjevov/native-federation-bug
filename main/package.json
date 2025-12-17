@@ -5,7 +5,7 @@
     "scripts": {
         "build": "ng build",
         "build:min": "ng build -c production",
-        "prebuild": "npm run version:build && npm run config:build",
+        "prebuild": "npm run config:build",
         "prebuild:min": "npm run clean && npm run prebuild",
         "clean": "rimraf wwwroot config/configOverride.js config/configServerOverride.js config/configBrowserOverride.js version.json",
         "clean:deps": "rimraf .angular || echo '.angular removed'",
@@ -13,7 +13,7 @@
         "config:build": "node .utils/generateConfig.js",
         "server": "node server.js",
         "lint": "eslint app/**/*.ts",
-        "prestart": "npm run version:build && npm run config:build",
+        "prestart": "npm run config:build",
         "start": "concurrently \"npm run server -- --devPort\" \"ng serve\""
     },
     "private": true
