@@ -8,7 +8,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Webpack Build",
+            "name": "Launch Ng Serve",
             "program": "${workspaceRoot}/node_modules/@angular/cli/bin/ng.js",
             "args": [
                 "serve",
@@ -19,7 +19,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Lerna start Build",
+            "name": "Launch Lerna Start",
             "program": "${workspaceRoot}/node_modules/lerna/dist/cli.js",
             "args": [
                 "run",
